@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,22 @@ namespace Posos.Exceptions
         /// Initializes a new instance of the PropertyNullException class.
         /// </summary>
         public PropertyNullException() : base(Resources.Resources.ResourceManager.GetString("Prop_PropertyNull"))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PropertyNullException class with serialized data.
+        /// </summary>
+        /// <param name="info">The <see cref="System.Runtime.Serialization.SerializationInfo">SerializationInfo</see> that holds the serialized object data about the exception being thrown.</param>
+        /// <param name="context">The <see cref="System.Runtime.Serialization.StreamingContext">StreamingContext</see> that contains contextual information about the source or destination.</param>
+        /// <exception cref="System.ArgumentNullException">The <i>info</i> parameter is <b>null</b>.</exception>
+        /// <exception cref="System.Runtime.Serialization.SerializationException">The class name is <b>null</b> or <see cref="System.Exception.HResult">HResult</see> is zero (0).</exception>
+        /// <remarks>
+        /// This constructor is called during deserialization to reconstitute the exception object transmitted over a stream. For more information, see <a href="https://msdn.microsoft.com/en-us/library/90c86ass(v=vs.110).aspx">XML and SOAP Serialization</a>.
+        /// </remarks>
+        /// <seealso cref="System.Runtime.Serialization.SerializationInfo"/>
+        /// <seealso cref="System.Runtime.Serialization.StreamingContext "/>
+        protected PropertyNullException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
 
