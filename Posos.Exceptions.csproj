@@ -41,12 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exception.cs" />
     <Compile Include="PropertyException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyOutOfRangeException.cs" />
-    <Compile Include="PropertyNullOrWhitespaceException.cs" />
-    <Compile Include="PropertyNullOrEmptyException.cs" />
     <Compile Include="PropertyNullException.cs" />
     <Compile Include="Resources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
